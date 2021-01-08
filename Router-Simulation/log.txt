@@ -1,0 +1,16 @@
+d1 (pc ) arrived
+d4 (pc ) arrived
+d3 (mobile ) arrived and in waiting list
+d2 (pc ) arrived and in waiting list
+Connection #1 : d1 is connected
+Connection #2 : d4 is connected
+Connection #1 : d1 performs online activity
+Connection #2 : d4 performs online activity
+Connection #2 : d4 is disconnected
+Connection #2 : d3 is connected
+Connection #1 : d1 is disconnected
+Connection #1 : d2 is connected
+Connection #2 : d3 performs online activity
+Connection #2 : d3 is disconnected
+Connection #1 : d2 performs online activity
+Connection #1 : d2 is disconnected
