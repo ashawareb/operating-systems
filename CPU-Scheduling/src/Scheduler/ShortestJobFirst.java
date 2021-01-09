@@ -1,5 +1,7 @@
 package Scheduler;
 
+import Process.Process;
+
 import java.util.List;
 
 public class ShortestJobFirst extends Scheduler {
