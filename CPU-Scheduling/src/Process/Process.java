@@ -7,7 +7,7 @@ public class Process {
     private Integer burstTime;
     private Integer waitingTime;
     private Integer turnaroundTime;
-    private Integer aliveTime;
+    private Integer aliveTime = 0;
     private Integer originalPriority;
     private Integer updatedPriority;
 

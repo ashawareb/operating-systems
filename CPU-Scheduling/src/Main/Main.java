@@ -28,11 +28,13 @@ public class Main {
             p.setArrivalTime(input.nextInt());
             System.out.print("Enter Process burst time: ");
             p.setBurstTime(input.nextInt());
+            System.out.print("Enter Process priority: ");
+            p.setUpdatedPriority(input.nextInt());
             processes.add(p);
         }
-        System.out.print("Enter Context switching duration: ");
-        contextSwitchingDuration = input.nextInt();
-        SRTF ob = new SRTF(new LinkedList<>(processes), contextSwitchingDuration);
+        //System.out.print("Enter Context switching duration: ");
+        //contextSwitchingDuration = input.nextInt();
+        PriorityScheduler ob = new PriorityScheduler(new LinkedList<>(processes));
         ob.schedule();
     }
 }
