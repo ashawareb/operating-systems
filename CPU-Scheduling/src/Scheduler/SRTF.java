@@ -85,8 +85,8 @@ public class SRTF extends Scheduler {
             System.out.println("| Process waiting time:       |   " + ob.getWaitingTime() + "               |");
             System.out.println("| Process turnaround time:    |   " + ob.getTurnaroundTime() + "               |");
             System.out.println("+-------------------------------------------------+");
-            avaregeWaitingTime = ob.getWaitingTime() * 1.0 / information.size();
-            avaregeTurnaroundTime = ob.getTurnaroundTime() * 1.0 / information.size();
+            avaregeWaitingTime += ob.getWaitingTime() * 1.0 / information.size();
+            avaregeTurnaroundTime += ob.getTurnaroundTime() * 1.0 / information.size();
         }
         System.out.println("+-------------------------------------------------+");
         System.out.println("| Avarege Waiting time:       |   " + avaregeWaitingTime + "             |");
