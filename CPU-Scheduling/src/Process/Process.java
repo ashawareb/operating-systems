@@ -3,13 +3,13 @@ package Process;
 public class Process {
     private String processName;
     private String processID;
-    private int arrivalTime;
-    private int burstTime;
-    private int waitingTime;
-    private int turnaroundTime;
-    private int aliveTime;
-    private int originalPriority;
-    private int updatedPriority;
+    private Integer arrivalTime;
+    private Integer burstTime;
+    private Integer waitingTime;
+    private Integer turnaroundTime;
+    private Integer aliveTime;
+    private Integer originalPriority;
+    private Integer updatedPriority;
 
     public Process(Process process) {
         this.processName = process.processName;
@@ -38,7 +38,7 @@ public class Process {
         this.processID = processID;
     }
 
-    public int getArrivalTime() {
+    public Integer getArrivalTime() {
         return arrivalTime;
     }
 
@@ -46,7 +46,7 @@ public class Process {
         this.arrivalTime = arrivalTime;
     }
 
-    public int getBurstTime() {
+    public Integer getBurstTime() {
         return burstTime;
     }
 
@@ -54,7 +54,7 @@ public class Process {
         this.burstTime = burstTime;
     }
 
-    public int getWaitingTime() {
+    public Integer getWaitingTime() {
         return waitingTime;
     }
 
@@ -62,7 +62,7 @@ public class Process {
         this.waitingTime = waitingTime;
     }
 
-    public int getTurnaroundTime() {
+    public Integer getTurnaroundTime() {
         return turnaroundTime;
     }
 
@@ -70,7 +70,7 @@ public class Process {
         this.turnaroundTime = turnaroundTime;
     }
 
-    public int getAliveTime() {
+    public Integer getAliveTime() {
         return aliveTime;
     }
 
@@ -78,7 +78,7 @@ public class Process {
         this.aliveTime = aliveTime;
     }
 
-    public int getOriginalPriority() {
+    public Integer getOriginalPriority() {
         return originalPriority;
     }
 
@@ -86,7 +86,7 @@ public class Process {
         this.originalPriority = originalPriority;
     }
 
-    public int getUpdatedPriority() {
+    public Integer getUpdatedPriority() {
         return updatedPriority;
     }
 
