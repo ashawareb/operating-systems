@@ -1,5 +1,7 @@
 package Scheduler;
 
+import Process.Process;
+
 import java.util.List;
 
 public abstract class Scheduler {
