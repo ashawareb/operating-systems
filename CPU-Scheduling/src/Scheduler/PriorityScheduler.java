@@ -20,8 +20,6 @@ public class PriorityScheduler extends Scheduler {
     @Override
     public void schedule() {
         Process running = null;
-        //List<Process> order = new ArrayList<Process>();
-        //PriorityQueue<Process> priority = new PriorityQueue<>(numOfProcesses, new PriorityComparator());
         for (Process ob : processes) {
             ob.setOriginalPriority(ob.getUpdatedPriority());
             priority.add(ob);
