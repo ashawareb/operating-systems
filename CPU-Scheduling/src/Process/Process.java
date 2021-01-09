@@ -11,6 +11,9 @@ public class Process {
     private Integer originalPriority;
     private Integer updatedPriority;
 
+    public Process() {
+    }
+
     public Process(Process process) {
         this.processName = process.processName;
         this.processID = process.processID;

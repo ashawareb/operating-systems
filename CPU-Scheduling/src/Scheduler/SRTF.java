@@ -57,7 +57,7 @@ public class SRTF extends Scheduler {
                 burst.add(p); //Add to queue if not finishid
             } else {
                 stop--;
-                int pWaitingTime = i - p.getArrivalTime() - actual.get(p.getProcessID());
+                int pWaitingTime = i - p.getArrivalTime() - actual.get(p.getProcessID()) + 1;
                 int pTurnaroundTime = i - p.getArrivalTime() + 1;
                 p.setWaitingTime(pWaitingTime);
                 p.setTurnaroundTime(pTurnaroundTime);
@@ -68,10 +68,29 @@ public class SRTF extends Scheduler {
                 }
             }
         }
-        //out();
+        out();
     }
 
     private void out() {
-
+        Double avaregeWaitingTime = 0.0;
+        Double avaregeTurnaroundTime = 0.0;
+        System.out.println("Tim, \t Process processing");
+        for (Pair<Integer, String> e : executionOrder) {
+            System.out.println(e.getKey() + " \t\t " + e.getValue());
+        }
+        System.out.println("+-------------------------------------------------+");
+        for (Process ob : information) {
+            System.out.println("| Process name:               |   " + ob.getProcessName() + "               |");
+            System.out.println("| Process ID:                 |   " + ob.getProcessID() + "               |");
+            System.out.println("| Process waiting time:       |   " + ob.getWaitingTime() + "               |");
+            System.out.println("| Process turnaround time:    |   " + ob.getTurnaroundTime() + "               |");
+            System.out.println("+-------------------------------------------------+");
+            avaregeWaitingTime = ob.getWaitingTime() * 1.0 / information.size();
+            avaregeTurnaroundTime = ob.getTurnaroundTime() * 1.0 / information.size();
+        }
+        System.out.println("+-------------------------------------------------+");
+        System.out.println("| Avarege Waiting time:       |   " + avaregeWaitingTime + "             |");
+        System.out.println("| Avarege Turnaround time:    |   " + avaregeTurnaroundTime + "             |");
+        System.out.println("+-------------------------------------------------+");
     }
 }
