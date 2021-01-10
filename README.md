@@ -10,7 +10,7 @@
 ## 2. Command-Line-Interpreter
 *Basic command line interpreter support various CLI commands.*
 ```
-- *cd* : cd [directory] - change directory
+- cd : cd [directory] - change directory
 - ls : ls || ls [Directory] - list all files in directory
 - pwd : pwd - print the working directory
 - cp : cp [file] [file] - copy file
