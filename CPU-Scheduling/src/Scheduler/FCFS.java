@@ -11,8 +11,7 @@ import Comparator.BurstTimeComparator;
 import javafx.util.Pair;
 
 
-public class SRTF extends Scheduler {
-    //Shortest Remaining Time First
+public class FCFS extends Scheduler {
     private PriorityQueue<Process> burst;
     private PriorityQueue<Process> arrival;
     private List<Pair<Integer, String>> executionOrder;
@@ -20,14 +19,14 @@ public class SRTF extends Scheduler {
     private int stop;
     private Map<String, Integer> actual;
 
-    public SRTF(List<Process> processes, int contextSwitchDuration) {
+    public FCFS(List<Process> processes, int contextSwitchDuration) {
         super(processes.size(), contextSwitchDuration, processes);
         stop = processes.size();
         executionOrder = new ArrayList<>();
         information = new ArrayList<>();
         this.contextSwitchDuration = contextSwitchDuration;
-        burst = new PriorityQueue<>(new BurstTimeComparator());
-        arrival = new PriorityQueue<>(new BurstTimeComparator());
+        burst = new PriorityQueue<>(new ArrivalTimeComparator());
+        arrival = new PriorityQueue<>(new ArrivalTimeComparator());
         arrival.addAll(processes);
         actual = new HashMap<>();
         for (Process ob : processes) {

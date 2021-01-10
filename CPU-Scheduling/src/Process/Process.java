@@ -1,3 +1,6 @@
+/**
+ * @author: AbdUlRahman Shawareb
+ */
 package Process;
 
 public class Process {

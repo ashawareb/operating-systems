@@ -1,3 +1,6 @@
+/**
+ * @author: AbdUlRahman Shawareb
+ */
 package Comparator;
 
 import java.util.Comparator;

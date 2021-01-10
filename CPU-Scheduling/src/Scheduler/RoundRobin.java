@@ -1,3 +1,6 @@
+/**
+ * @author: AbdUlRahman Shawareb
+ */
 package Scheduler;
 
 import Comparator.ArrivalTimeComparator;
@@ -16,8 +19,8 @@ public class RoundRobin extends Scheduler {
     private Integer quantum;
 
 
-    public RoundRobin(Integer quantum, Integer contextSwitchDuration, List<Process> processes) {
-        super(processes.size(), contextSwitchDuration, processes);
+    public RoundRobin(Integer quantum, List<Process> processes) {
+        super(processes.size(), 0, processes);
         burst = new ArrayList<>();
         arrival = new ArrayList<>();
         waiting = new ArrayList<>();
@@ -30,7 +33,7 @@ public class RoundRobin extends Scheduler {
         }
     }
 
-    public void waitingTimer(List<Process> processes, int quantum, int compeletiontime[]) {
+    private void waitingTimer(List<Process> processes, int quantum, int compeletiontime[]) {
         int remainingTime[] = new int[processes.size()];
         for (int i = 0; i < processes.size(); i++) {
             remainingTime[i] = processes.get(i).getBurstTime();
@@ -65,7 +68,7 @@ public class RoundRobin extends Scheduler {
 
     }
 
-    public void turnaroundTimer(List<Process> processes, int completiontime[]) {
+    private void turnaroundTimer(List<Process> processes, int completiontime[]) {
         for (int i = 0; i < processes.size(); i++) {
             int tat = completiontime[i] - processes.get(i).getArrivalTime();
             processes.get(i).setTurnaroundTime(tat);
@@ -74,7 +77,7 @@ public class RoundRobin extends Scheduler {
         }
     }
 
-    public void avaregeTimer(List<Process> processes, int quantum) {
+    private void avaregeTimer(List<Process> processes, int quantum) {
         int completionTime[] = new int[processes.size()];
         waitingTimer(processes, quantum, completionTime);
         turnaroundTimer(processes, completionTime);

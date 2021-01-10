@@ -1,3 +1,6 @@
+/**
+ * @author: AbdUlRahman Shawareb
+ */
 package Scheduler;
 
 import Process.Process;
