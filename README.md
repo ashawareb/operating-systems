@@ -1,4 +1,4 @@
-# operating-systems
+# operating systems various tasks and operations
 ## 1. CPU-Scheduling:
 *CPU Scheduler Simulation using various CPU-Scheduling techniques.*
 ```
