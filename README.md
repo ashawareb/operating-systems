@@ -6,12 +6,11 @@
 - SRTF algorithm
 - RR algorithm
 - Priority algorithm
-
 ```
 ## 2. Command-Line-Interpreter
 *Basic command line interpreter support various CLI commands.*
 ```
-- cd : cd [directory] - change directory
+- *cd* : cd [directory] - change directory
 - ls : ls || ls [Directory] - list all files in directory
 - pwd : pwd - print the working directory
 - cp : cp [file] [file] - copy file
@@ -27,7 +26,6 @@
 - args : args [command] - list all commands arguments
 - Redirect operator > : command > [file name] - overwrite the output to the file
 - Redirect operator >> : command >> [file name] - append the out put to the file
-
 ```
 ## 3. Router-Simulation:
 *Multithreaded Router Simulator in Java using Semaphores.*
