@@ -1,6 +1,6 @@
 # operating systems various tasks and operations
 ## 1. CPU-Scheduling:
-*CPU Scheduler Simulation using various CPU-Scheduling techniques.*
+**CPU Scheduler Simulation using various CPU-Scheduling techniques.**
 ```
 - FCFS algorithm
 - SRTF algorithm
@@ -8,7 +8,7 @@
 - Priority algorithm
 ```
 ## 2. Command-Line-Interpreter
-*Basic command line interpreter support various CLI commands.*
+**Basic command line interpreter support various CLI commands.**
 ```
 - cd : cd [directory] - change directory
 - ls : ls || ls [Directory] - list all files in directory
@@ -28,4 +28,4 @@
 - Redirect operator >> : command >> [file name] - append the out put to the file
 ```
 ## 3. Router-Simulation:
-*Multithreaded Router Simulator in Java using Semaphores.*
+**Multithreaded Router Simulator in Java using Semaphores.**
